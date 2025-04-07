@@ -25,7 +25,7 @@ jobs:
 
     - name: Run Test Suite
       run: |
-          mvn clean test -DsuiteXmlFile=${{ github.event.inputs.suite }}
+          mvn clean test -Dsuite.suite=${{ github.event.inputs.suite }}
 
     - name: Upload Allure Reports as artifacts
       uses: actions/upload-artifact@v4
