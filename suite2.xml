@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Create a new calendar suite">
+    <test verbose="2" name="Create a new calendar Test">
+        <classes>
+            <class name="tests.CalendarTest">
+                <methods>
+                    <include name="Create a new calendar Test"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

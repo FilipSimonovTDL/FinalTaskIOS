@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Whole day event suite">
+    <test verbose="2" name="Whole Day Event Test">
+        <classes>
+            <class name="tests.CalendarTest">
+                <methods>
+                    <include name="Whole Day Event Test"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
