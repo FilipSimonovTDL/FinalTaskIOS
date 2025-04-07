@@ -6,7 +6,7 @@
         <classes>
             <class name="tests.CalendarTest">
                 <methods>
-                    <include name="Create a new calendar Test"/>
+                    <include name="createNewCalendarTest"/>
                 </methods>
             </class>
         </classes>
