@@ -6,11 +6,11 @@ on:
       suite:
         description: 'Select which test suite to run'
         required: true
-        default: 'GeniusLevels.xml'
+        default: 'CreateAnEvent.xml'
         type: choice
         options:
-          - GeniusLevels.xml
-          - BookingAppTests.xml
+          - CreateAnEvent.xml
+          - CreateNewCalendar.xml
 
 
 
