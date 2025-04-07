@@ -1,0 +1,47 @@
+name: Mobile Test Automation - Calendar App
+
+on:
+  workflow_dispatch:
+    inputs:
+      suite:
+        description: 'Select which test suite to run'
+        required: true
+        default: 'GeniusLevels.xml'
+        type: choice
+        options:
+          - GeniusLevels.xml
+          - BookingAppTests.xml
+
+
+
+jobs:
+  test:
+    runs-on: self-hosted
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+
+    - name: Run Test Suite
+      run: |
+          mvn clean test -DsuiteXmlFile=${{ github.event.inputs.suite }}
+
+    - name: Upload Allure Reports as artifacts
+      uses: actions/upload-artifact@v4
+      with:
+          name: allure-results
+          path: allure-results
+
+    - name: Upload Screenshots as artifacts
+      uses: actions/upload-artifact@v4
+      with:
+          name: screenshots
+          path: screenshots
+
+
+    - name: Upload Target as artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: target
+        path: target
