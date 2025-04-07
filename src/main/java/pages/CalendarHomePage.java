@@ -66,7 +66,7 @@ public class CalendarHomePage extends Helpers {
     @Step("Pressing on continue button")
     public void clickContinueButton() throws InterruptedException {
         continueButton.click();
-        Thread.sleep(7000);
+        Thread.sleep(GlobalVariables.globalTimeout);
     }
 
 }
